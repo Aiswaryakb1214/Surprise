@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Real Question 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      overflow: hidden;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      max-width: 420px;
+      width: 90%;
+    }
+    h1 { color: #d6336c; font-size: 26px; margin-bottom: 25px; }
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      position: relative;
+      min-height: 60px;
+    }
+    button {
+      padding: 14px 32px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .yes-btn { background-color: #ff3366; color: white; }
+    .no-btn { background-color: #ced4da; color: #495057; position: absolute; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div style="font-size: 55px;">💍</div>
+    <h1>Will you be mine forever and ever?</h1>
+    <div class="btn-wrap">
+      <button class="yes-btn" onclick="location.href='final.html'">YES 1000x! 🥰</button>
+      <button class="no-btn" id="noBtn" onmouseover="moveButton()">No way</button>
+    </div>
+  </div>
+
+  <script>
+    function moveButton() {
+      const btn = document.getElementById('noBtn');
+      const randomX = Math.floor(Math.random() * 260) - 130;
+      const randomY = Math.floor(Math.random() * 200) - 100;
+      btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+  </script>
+</body>
+</html>
